@@ -10,7 +10,7 @@ public class MousenServerTarget : TargetRules
     public MousenServerTarget(TargetInfo Target) : base(Target)
     {
         Type = TargetType.Server;
-        DefaultBuildSettings = BuildSettingsVersion.V2;
+        DefaultBuildSettings = BuildSettingsVersion.V5;
         ExtraModuleNames.Add("Mousen");
     }
 }
