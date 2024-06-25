@@ -8,7 +8,7 @@ public class MousenTarget : TargetRules
 	public MousenTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V5;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.Add("Mousen");
 	}
 }

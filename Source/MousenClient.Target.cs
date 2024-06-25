@@ -8,7 +8,7 @@ public class MousenClientTarget : TargetRules
 	public MousenClientTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Client;
-		DefaultBuildSettings = BuildSettingsVersion.V5;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.Add("Mousen");
 	}
 }

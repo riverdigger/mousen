@@ -13,6 +13,7 @@ Saved
 *.xcodeproj
 *.xcworkspace
 Releases
+Releases/*
 Releases.zip
 Content/Fantastic_Village_Pack/*
 Content/FantasyBundle/*
