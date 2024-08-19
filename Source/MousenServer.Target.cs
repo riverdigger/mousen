@@ -2,15 +2,18 @@
 
 using UnrealBuildTool;
 using System.Collections.Generic;
-using System;
 
 [SupportedPlatforms(UnrealPlatformClass.Server)]
 public class MousenServerTarget : TargetRules
 {
     public MousenServerTarget(TargetInfo Target) : base(Target)
-    {
-        Type = TargetType.Server;
+	{
+		Type = TargetType.Server;
         DefaultBuildSettings = BuildSettingsVersion.Latest;
         ExtraModuleNames.Add("Mousen");
+
+        DisablePlugins.Add("WMFMediaPlayer");
+        DisablePlugins.Add("WindowsMoviePlayer");
+        DisablePlugins.Add("MediaFoundationMediaPlayer");
     }
 }

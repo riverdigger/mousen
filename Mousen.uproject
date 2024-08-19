@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.4",
+	"EngineAssociation": "{F718CE94-4A00-E11D-F7B0-9A82E6E20FB8}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -32,9 +32,8 @@
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/b719437f3fb54c259b34227363df8cab"
 		},
 		{
-			"Name": "Substance",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2f6439c2f9584f49809d9b13b16c2ba4"
+			"Name": "PlayFabGSDK",
+			"Enabled": true
 		}
 	]
 }
