@@ -37,6 +37,10 @@
 		{
 			"Name": "PlayFabGSDK",
 			"Enabled": true
+		},
+		{
+			"Name": "SMN2P",
+			"Enabled": false
 		}
 	]
 }
