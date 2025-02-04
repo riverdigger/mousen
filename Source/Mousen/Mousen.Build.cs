@@ -8,6 +8,7 @@ public class Mousen : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "PlayFabGSDK" });
-	}
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameplayTasks", "GameplayAbilities", "HeadMountedDisplay", "PlayFabGSDK" });
+        PrivateDependencyModuleNames.AddRange(new string[] { "CoreUObject", "Engine", "NetCore" });
+    }
 }
