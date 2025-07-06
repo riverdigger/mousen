@@ -21,30 +21,39 @@ public:
 	static UMousenGameUserSettings* GetMousenGameUserSettings();
 
 	UFUNCTION(BlueprintCallable)
-	void SetAlphaTeamColor(FLinearColor NewColor);
+	void SetFriendlyTeamColor(FLinearColor NewColor);
 	
 	UFUNCTION(BlueprintCallable)
-	void SetBetaTeamColor(FLinearColor NewColor);
+	void SetEnemyTeamColor(FLinearColor NewColor);
 
 	UFUNCTION(BlueprintCallable)
 	void SetMouseSensitivity(float NewSensitivity);
 
-	UFUNCTION(BlueprintPure)
-	FLinearColor GetAlphaTeamColor() const;
+	UFUNCTION(BlueprintCallable)
+	void SetShowFPS(bool Enable);
 
 	UFUNCTION(BlueprintPure)
-	FLinearColor GetBetaTeamColor() const;
+	FLinearColor GetFriendlyTeamColor() const;
+
+	UFUNCTION(BlueprintPure)
+	FLinearColor GetEnemyTeamColor() const;
 
 	UFUNCTION(BlueprintPure)
 	float GetMouseSensitivity() const;
 
+	UFUNCTION(BlueprintPure)
+	bool GetShowFPS() const;
+
 protected:
 	UPROPERTY(Config)
-	FLinearColor AlphaTeamColor;
+	FLinearColor FriendlyTeamColor;
 	
 	UPROPERTY(Config)
-	FLinearColor BetaTeamColor;
+	FLinearColor EnemyTeamColor;
 
 	UPROPERTY(Config)
 	float MouseSensitivity;
+
+	UPROPERTY(Config)
+	bool ShowFPS;
 };

@@ -5,9 +5,10 @@
 
 UMousenGameUserSettings::UMousenGameUserSettings()
 {
-	AlphaTeamColor = FLinearColor(1.0f, 0.0f, 0.0f, 1.0f);
-	BetaTeamColor = FLinearColor(0.0f, 0.0f, 1.0f, 1.0f);
+	FriendlyTeamColor = FLinearColor(1.0f, 0.0f, 0.0f, 1.0f);
+	EnemyTeamColor = FLinearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	MouseSensitivity = 0.542f;
+	ShowFPS = false;
 }
 
 UMousenGameUserSettings* UMousenGameUserSettings::GetMousenGameUserSettings()
@@ -15,19 +16,19 @@ UMousenGameUserSettings* UMousenGameUserSettings::GetMousenGameUserSettings()
 	return Cast<UMousenGameUserSettings>(UGameUserSettings::GetGameUserSettings());
 }
 
-void UMousenGameUserSettings::SetAlphaTeamColor(FLinearColor NewColor)
+void UMousenGameUserSettings::SetFriendlyTeamColor(FLinearColor NewColor)
 {
-	AlphaTeamColor = NewColor;
+	FriendlyTeamColor = NewColor;
 }
 
-FLinearColor UMousenGameUserSettings::GetAlphaTeamColor() const
+FLinearColor UMousenGameUserSettings::GetFriendlyTeamColor() const
 {
-	return AlphaTeamColor;
+	return FriendlyTeamColor;
 }
 
-void UMousenGameUserSettings::SetBetaTeamColor(FLinearColor NewColor)
+void UMousenGameUserSettings::SetEnemyTeamColor(FLinearColor NewColor)
 {
-	BetaTeamColor = NewColor;
+	EnemyTeamColor = NewColor;
 }
 
 void UMousenGameUserSettings::SetMouseSensitivity(float NewSensitivity)
@@ -35,12 +36,22 @@ void UMousenGameUserSettings::SetMouseSensitivity(float NewSensitivity)
 	MouseSensitivity = NewSensitivity;
 }
 
-FLinearColor UMousenGameUserSettings::GetBetaTeamColor() const
+void UMousenGameUserSettings::SetShowFPS(bool Enable)
 {
-	return BetaTeamColor;
+	ShowFPS = Enable;
+}
+
+FLinearColor UMousenGameUserSettings::GetEnemyTeamColor() const
+{
+	return EnemyTeamColor;
 }
 
 float UMousenGameUserSettings::GetMouseSensitivity() const
 {
 	return MouseSensitivity;
+}
+
+bool UMousenGameUserSettings::GetShowFPS() const
+{
+	return ShowFPS;
 }
