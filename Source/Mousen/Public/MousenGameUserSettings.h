@@ -32,6 +32,24 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetShowFPS(bool Enable);
 
+	UFUNCTION(BlueprintCallable)
+	void SetMasterVolume(float NewVolume);
+
+	UFUNCTION(BlueprintCallable)
+	void SetMusicVolume(float NewVolume);
+
+	UFUNCTION(BlueprintCallable)
+	void SetSFXVolume(float NewVolume);
+
+	UFUNCTION(BlueprintPure)
+	float GetMasterVolume() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetMusicVolume() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetSFXVolume() const;
+
 	UFUNCTION(BlueprintPure)
 	FLinearColor GetFriendlyTeamColor() const;
 
@@ -56,4 +74,13 @@ protected:
 
 	UPROPERTY(Config)
 	bool ShowFPS;
+
+	UPROPERTY(Config)
+	float MasterVolume;
+
+	UPROPERTY(Config)
+	float MusicVolume;
+
+	UPROPERTY(Config)
+	float SFXVolume;
 };

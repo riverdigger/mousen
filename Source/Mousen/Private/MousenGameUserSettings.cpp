@@ -9,6 +9,11 @@ UMousenGameUserSettings::UMousenGameUserSettings()
 	EnemyTeamColor = FLinearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	MouseSensitivity = 0.542f;
 	ShowFPS = false;
+
+	// Volume
+	MasterVolume = 1.0f;
+	MusicVolume = 1.0f;
+	SFXVolume = 1.0f;
 }
 
 UMousenGameUserSettings* UMousenGameUserSettings::GetMousenGameUserSettings()
@@ -39,6 +44,36 @@ void UMousenGameUserSettings::SetMouseSensitivity(float NewSensitivity)
 void UMousenGameUserSettings::SetShowFPS(bool Enable)
 {
 	ShowFPS = Enable;
+}
+
+void UMousenGameUserSettings::SetMasterVolume(float NewVolume)
+{
+	MasterVolume = NewVolume;
+}
+
+void UMousenGameUserSettings::SetMusicVolume(float NewVolume)
+{
+	MusicVolume = NewVolume;
+}
+
+void UMousenGameUserSettings::SetSFXVolume(float NewVolume)
+{
+	SFXVolume = NewVolume;
+}
+
+float UMousenGameUserSettings::GetMasterVolume() const
+{
+	return MasterVolume;
+}
+
+float UMousenGameUserSettings::GetMusicVolume() const
+{
+	return MusicVolume;
+}
+
+float UMousenGameUserSettings::GetSFXVolume() const
+{
+	return SFXVolume;
 }
 
 FLinearColor UMousenGameUserSettings::GetEnemyTeamColor() const
